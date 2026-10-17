@@ -1,5 +1,7 @@
 Get the latest news directly from your terminal!
 
+![screenshot](https://github.com/FrodoAlaska/HeaderNews/blob/master/assets/screenshot-1.png) 
+
 ## Requirements
 
 *HeaderNews* requires the libraries below in order to function
