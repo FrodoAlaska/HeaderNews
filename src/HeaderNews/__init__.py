@@ -1,0 +1,1 @@
+from .headernews import main

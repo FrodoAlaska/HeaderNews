@@ -104,24 +104,29 @@ def get_api_key(console, path):
 
 ## Functions ##
 
-# Create a TUI console 
-console = Console() 
+## Main ## 
 
-# Load the API key
+def main(): 
+    # Create a TUI console 
+    console = Console() 
 
-api_file_path = "api_key.txt"
-api_key       = ""
+    # Load the API key
 
-if not os.path.exists(api_file_path):
-    api_key = get_api_key(console, api_file_path)
-else: 
-    with open(api_file_path, "r") as file:
-        api_key = file.read().strip()
+    api_file_path = "api_key.txt"
+    api_key       = ""
 
-# Load the API 
-api = NewsApiClient(api_key=api_key)
+    if not os.path.exists(api_file_path):
+        api_key = get_api_key(console, api_file_path)
+    else: 
+        with open(api_file_path, "r") as file:
+            api_key = file.read().strip()
 
-# Gather and display the news 
+    # Load the API 
+    api = NewsApiClient(api_key=api_key)
 
-articles = gather_news(api)
-display_news(console, articles)
+    # Gather and display the news 
+
+    articles = gather_news(api)
+    display_news(console, articles)
+
+## Main ## 
